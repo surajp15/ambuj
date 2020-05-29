@@ -1,0 +1,113 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/hamburgers.min.css">
+    <link rel="icon" href="img/favicon.png" type="image/gif">
+    <title>Ambuj Yadav</title>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+        <a class="navbar-brand" href="#"><img src="img/Ace.png" class="rounded-circle" alt="ACE" width="50px" height="50px"></a>
+        <div class="name" style="font-size: 10; font-weight: 800;">
+            <a class="navbar-brand" href="#"><h3><strong>Ace</strong></h3></a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+            <!--<span class="navbar-toggler-icon"></span>-->
+            <div class="hamburger hamburger--spin">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </button>
+
+        <div class="collapse navbar-collapse " style="text-align:center; font-size: larger; font-weight: 800;" id="navbarNavDropdown">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#profile"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#social"><i class="fa fa-share-square-o" aria-hidden="true"></i>Social</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacts"><i class="fa fa-address-book" aria-hidden="true"></i>Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about"><i class="fa fa-caret-down" aria-hidden="true"></i>About</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+
+    <div id="home" class="wrapper">
+        <div class="main">
+            <h1 class="main">
+                Work In Progress
+            </h1>
+        </div>
+    </div>
+
+    <div id="profile" class="wrapper">
+        <h1>PORFILE</h1>
+    </div>
+
+    <div id="social" class="wrapper">
+        <h1>SOCIAL</h1>
+    </div>
+
+    <div id="contacts" class="wrapper">
+        <h1>CONTACTS</h1>
+    </div>
+
+    <div id="about" class="wrapper">
+        <h1>ABOUT</h1>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        /**
+         * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+         *
+         * @private
+         * @author Todd Motto
+         * @link https://github.com/toddmotto/foreach
+         * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+         * @callback requestCallback      callback   - Callback function for each iteration.
+         * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+         * @returns {}
+         */
+        var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
+
+        var hamburgers = document.querySelectorAll(".hamburger");
+        if (hamburgers.length > 0) {
+            forEach(hamburgers, function (hamburger) {
+                hamburger.addEventListener("click", function () {
+                    this.classList.toggle("is-active");
+                }, false);
+            });
+        }
+    </script>
+</body>
+</html>
